@@ -9,30 +9,55 @@ const sessid = "e14e316cb5cbcae4320a834ebb234f56"
 app.use(cors());
 
 const actions = {
-    getSectionQuestion: "getSectionQuestion",
-    getSections: "getSections"
-}
+    getQuestions: "getQuestions",
+    getSections: "getSections",
+    newQuestion: "newQuestion",
+    search: "search"
+};
 
-const getData = (action, ...args) => {
+const getData = ({
+    action, page, size, sectionId, q
+}) => {
 
     switch (action) {
         case actions.getSections:
             return sectionService.getSections()
-        case actions.getSectionQuestion:
-            return sectionService.getSectionQuestion(...args)
+        case actions.getQuestions:
+            return sectionService.getSectionQuestion({
+                page, size, sectionId
+            })
+        case actions.search:
+            return sectionService.search(q);
+        case actions.newQuestion:
+            return true
     }
 }
 
 app.get("/", function(req, res) {
-    const { action, sessid, sectionId, page } = req.query;
+    const { action, sessid, sectionId, page, size, q } = req.query;
 
-    const data = getData(action, sectionId, page);
+    const data = getData({
+        action,
+        sectionId,
+        page,
+        size,
+        q
+    });
+
     res.json({
         data: data,
         errors: [],
         status: "success"
     });
 });
+
+app.post("/", function(req, res) {
+    res.json({
+        data: false,
+        errors: ["ошбика сервераааа пот"],
+        status: "success"
+    });
+})
 
 app.listen(port, () => {
     console.log("App listen on " + port)
