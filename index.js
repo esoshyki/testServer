@@ -17,7 +17,15 @@ const actions = {
 };
 
 const getData = ({
+<<<<<<< HEAD
     action, page, size, sectionId, q, questionId
+=======
+    action,
+    page,
+    size,
+    sectionId,
+    q
+>>>>>>> 7b7cf9bff657452f9f2b383ddf4686f79cc21d72
 }) => {
 
     switch (action) {
@@ -25,7 +33,9 @@ const getData = ({
             return sectionService.getSections()
         case actions.getQuestions:
             return sectionService.getSectionQuestion({
-                page, size, sectionId
+                page,
+                size,
+                sectionId
             })
         case actions.getQuestion:
             return sectionService.getQuestionById({
@@ -35,6 +45,8 @@ const getData = ({
             return sectionService.search(q);
         case actions.newQuestion:
             return true
+        default:
+            return []
     }
 }
 
@@ -67,6 +79,6 @@ app.post("/", function(req, res) {
     });
 })
 
-app.listen(port, () => {
+app.listen(process.env.port, () => {
     console.log("App listen on " + port)
 })
