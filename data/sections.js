@@ -37,10 +37,21 @@ const search = q => {
     sections.forEach(section => questions = [...questions, ...section.questions]);
 
     return questions.filter(question => {
-        console.log(question);
         return match(q, question.NAME, question.DETAIL_TEXT)
         }
     );
+}
+
+const getQuestionById = ({questionId}) => {
+
+    const question = sections.reduce((
+        acc, next
+    ) => {
+        return [...acc, ...next.questions]
+    }, []).find(q => q.ID === +questionId);
+
+    return question || null
+
 }
 
 
@@ -48,6 +59,7 @@ const search = q => {
 const sectionsService = {
     getSectionQuestion,
     getSections,
+    getQuestionById,
     search
 };
 

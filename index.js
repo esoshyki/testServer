@@ -10,13 +10,14 @@ app.use(cors());
 
 const actions = {
     getQuestions: "getQuestions",
+    getQuestion: "getQuestion",
     getSections: "getSections",
     newQuestion: "newQuestion",
     search: "search"
 };
 
 const getData = ({
-    action, page, size, sectionId, q
+    action, page, size, sectionId, q, questionId
 }) => {
 
     switch (action) {
@@ -26,6 +27,10 @@ const getData = ({
             return sectionService.getSectionQuestion({
                 page, size, sectionId
             })
+        case actions.getQuestion:
+            return sectionService.getQuestionById({
+                questionId
+            })
         case actions.search:
             return sectionService.search(q);
         case actions.newQuestion:
@@ -34,14 +39,17 @@ const getData = ({
 }
 
 app.get("/", function(req, res) {
-    const { action, sessid, sectionId, page, size, q } = req.query;
+    const { action, sessid, sectionId, page, size, q, questionId } = req.query;
+
+
 
     const data = getData({
         action,
         sectionId,
         page,
         size,
-        q
+        q,
+        questionId
     });
 
     res.json({
