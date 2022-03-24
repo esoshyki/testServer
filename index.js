@@ -17,15 +17,7 @@ const actions = {
 };
 
 const getData = ({
-<<<<<<< HEAD
     action, page, size, sectionId, q, questionId
-=======
-    action,
-    page,
-    size,
-    sectionId,
-    q
->>>>>>> 7b7cf9bff657452f9f2b383ddf4686f79cc21d72
 }) => {
 
     switch (action) {
