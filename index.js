@@ -17,7 +17,12 @@ const actions = {
 };
 
 const getData = ({
-    action, page, size, sectionId, q, questionId
+    action,
+    page,
+    size,
+    sectionId,
+    q,
+    questionId
 }) => {
 
     switch (action) {
@@ -45,8 +50,6 @@ const getData = ({
 app.get("/", function(req, res) {
     const { action, sessid, sectionId, page, size, q, questionId } = req.query;
 
-
-
     const data = getData({
         action,
         sectionId,
@@ -62,6 +65,33 @@ app.get("/", function(req, res) {
         status: "success"
     });
 });
+
+app.get("/theme", (req, res) => {
+    const { getTheme, getThemes } = require('./data/themes');
+    if (req.query.id) {
+        const theme = getTheme(req.query.id);
+
+        if (theme) {
+            return res.json({
+                data: theme,
+                errors: [],
+                status: "success"
+            })
+        } else {
+            return res.json({
+                data: null,
+                errors: ["Тема не найдена"],
+                status: "error"
+            })
+        }
+    } else {
+        return res.json({
+            data: getThemes(),
+            errors: [],
+            status: "success"
+        })
+    }
+})
 
 app.post("/", function(req, res) {
     res.json({
