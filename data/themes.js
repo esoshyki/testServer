@@ -5,7 +5,7 @@ const Colors = {
     secondary: "#2e7d32",
     secondaryHover: "#66bb6a",
     secondaryActive: "#a5d6a7",
-    background: "#2f2f2f",
+    background: "#fff",
     white: "#fff",
     transparent: "transparent",
     dark: "#000",
