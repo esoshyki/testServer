@@ -74,6 +74,29 @@ const commonTheme = {
         }
     },
 
+    input: {
+        common: {
+            bgColor: Colors.dark,
+            color: Colors.white,
+            borderColor: Colors.white
+        },
+        hover: {
+            bgColor: Colors.dark,
+            color: Colors.white,
+            borderColor: Colors.white
+        },
+        active: {
+            bgColor: Colors.dark,
+            color: Colors.white,
+            borderColor: Colors.white
+        },
+        focus: {
+            bgColor: Colors.dark,
+            color: Colors.white,
+            borderColor: Colors.white
+        }
+    },
+
     spaces: {
         0: "0",
         1: "1rem"
