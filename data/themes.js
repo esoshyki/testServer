@@ -27,6 +27,28 @@ const commonTheme = {
         primaryHover: Colors.primaryHover,
         primaryActive: Colors.primaryActive
     },
+    input: {
+        common: {
+            bgColor: Colors.white,
+            color: Colors.dark,
+            borderColor: Colors.primary
+        },
+        hover: {
+            bgColor: Colors.white,
+            color: Colors.dark,
+            borderColor: Colors.primaryHover
+        },
+        active: {
+            bgColor: Colors.white,
+            color: Colors.dark,
+            borderColor: Colors.primaryActive
+        },
+        focus: {
+            bgColor: Colors.white,
+            color: Colors.dark,
+            borderColor: Colors.primaryActive
+        }
+    },
 
     buttons: {
         primary: {
