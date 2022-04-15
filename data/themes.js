@@ -13,6 +13,7 @@ const Colors = {
 }
 
 const commonTheme = {
+    id: 1,
     borderRadius: "5px",
 
     colors: {
@@ -58,6 +59,7 @@ const commonTheme = {
 }
 
 const secondaryTheme = {
+    id: 2,
     borderRadius: "5px",
 
     colors: {
