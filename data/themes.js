@@ -9,7 +9,10 @@ const Colors = {
     white: "#fff",
     transparent: "transparent",
     dark: "#000",
-    grey: "#f2f2f2"
+    grey: "#f2f2f2",
+    error: "#DB2845",
+    errorActive: "#C20824",
+    errorHover: "#F44C6A"
 }
 
 const commonTheme = {
@@ -25,7 +28,10 @@ const commonTheme = {
         bgMain: Colors.background,
         primary: Colors.primary,
         primaryHover: Colors.primaryHover,
-        primaryActive: Colors.primaryActive
+        primaryActive: Colors.primaryActive,
+        error: Colors.error,
+        errorActive: Colors.errorActive,
+        errorHover: Colors.errorHover
     },
     input: {
         common: {
