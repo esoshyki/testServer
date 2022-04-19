@@ -126,7 +126,7 @@ const secondaryTheme = {
             activeBackground: Colors.secondaryActive
         },
         outline: {
-            bgcolor: Colors.white,
+            bgcolor: Colors.dark,
             textColor: Colors.white,
             borderColor: Colors.white,
             hoverBackground: Colors.grey,
