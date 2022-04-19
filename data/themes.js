@@ -139,28 +139,28 @@ const secondaryTheme = {
             bgColor: Colors.dark,
             color: Colors.white,
             borderColor: Colors.white,
-            labelBackground: Colors.background,
+            labelBackground: Colors.dark,
             labelColor: Colors.white
         },
         hover: {
             bgColor: Colors.dark,
             color: Colors.white,
             borderColor: Colors.white,
-            labelBackground: Colors.background,
+            labelBackground: Colors.dark,
             labelColor: Colors.white
         },
         active: {
             bgColor: Colors.dark,
             color: Colors.white,
             borderColor: Colors.white,
-            labelBackground: Colors.background,
+            labelBackground: Colors.dark,
             labelColor: Colors.white
         },
         focus: {
             bgColor: Colors.dark,
             color: Colors.white,
             borderColor: Colors.white,
-            labelBackground: Colors.background,
+            labelBackground: Colors.dark,
             labelColor: Colors.white
         }
     },
