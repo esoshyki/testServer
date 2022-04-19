@@ -12,7 +12,8 @@ const Colors = {
     grey: "#f2f2f2",
     error: "#DB2845",
     errorActive: "#C20824",
-    errorHover: "#F44C6A"
+    errorHover: "#F44C6A",
+    grey: "#f2f2f2"
 }
 
 const commonTheme = {
@@ -64,6 +65,13 @@ const commonTheme = {
         }
     },
 
+    card: {
+        bgColor: Colors.transparent,
+        color: Colors.dark,
+        borderRadius: 10,
+        boxShadow: "0 0 5px 5px " + Colors.grey
+    },
+
     buttons: {
         primary: {
             bgcolor: Colors.primary,
@@ -108,6 +116,13 @@ const secondaryTheme = {
         primary: Colors.primary,
         primaryHover: Colors.primaryHover,
         primaryActive: Colors.primaryActive
+    },
+
+    card: {
+        bgColor: Colors.transparent,
+        color: Colors.white,
+        borderRadius: 10,
+        boxShadow: "0 0 5px 5px " + Colors.white
     },
 
     buttons: {
