@@ -37,22 +37,30 @@ const commonTheme = {
         common: {
             bgColor: Colors.white,
             color: Colors.dark,
-            borderColor: Colors.primary
+            borderColor: Colors.primary,
+            labelBackground: Colors.background,
+            labelColor: Colors.dark
         },
         hover: {
             bgColor: Colors.white,
             color: Colors.dark,
-            borderColor: Colors.primaryHover
+            borderColor: Colors.primaryHover,
+            labelBackground: Colors.background,
+            labelColor: Colors.dark
         },
         active: {
             bgColor: Colors.white,
             color: Colors.dark,
-            borderColor: Colors.primaryActive
+            borderColor: Colors.primaryActive,
+            labelBackground: Colors.background,
+            labelColor: Colors.dark
         },
         focus: {
             bgColor: Colors.white,
             color: Colors.dark,
-            borderColor: Colors.primaryActive
+            borderColor: Colors.primaryActive,
+            labelBackground: Colors.background,
+            labelColor: Colors.dark
         }
     },
 
@@ -130,22 +138,30 @@ const secondaryTheme = {
         common: {
             bgColor: Colors.dark,
             color: Colors.white,
-            borderColor: Colors.white
+            borderColor: Colors.white,
+            labelBackground: Colors.background,
+            labelColor: Colors.white
         },
         hover: {
             bgColor: Colors.dark,
             color: Colors.white,
-            borderColor: Colors.white
+            borderColor: Colors.white,
+            labelBackground: Colors.background,
+            labelColor: Colors.white
         },
         active: {
             bgColor: Colors.dark,
             color: Colors.white,
-            borderColor: Colors.white
+            borderColor: Colors.white,
+            labelBackground: Colors.background,
+            labelColor: Colors.white
         },
         focus: {
             bgColor: Colors.dark,
             color: Colors.white,
-            borderColor: Colors.white
+            borderColor: Colors.white,
+            labelBackground: Colors.background,
+            labelColor: Colors.white
         }
     },
 
